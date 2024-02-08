@@ -25,13 +25,7 @@ all_posts = [
         "excerpt":
         "Exploring the wonders of programming: from unleashing creativity to solving complex problems, it's a transformative tool shaping our digital landscape.",
         "content": """
-        "Programming Is Great" delves into the multifaceted 
-        realm of coding, highlighting its 
-        significance in today's digital landscape.
-          From fostering innovation to empowering 
-          problem-solving skills, this blog post celebrates 
-          the endless possibilities that programming offers. 
-          Join us as we explore the exciting journey of creativity and discovery through the art of coding.
+        "Programming Is Great" delves into the multifaceted realm of coding, highlighting its significance in today's digital landscape. From fostering innovation to empowering problem-solving skills, this blog post celebrates the endless possibilities that programming offers. Join us as we explore the exciting journey of creativity and discovery through the art of coding.
         """
     },
     {
@@ -62,8 +56,13 @@ def starting_page(request):
 
 
 def posts(request):
-    return render(request, "blog/all-posts.html")
+    return render(request, "blog/all-posts.html", {
+        "all_posts": all_posts
+    })
 
 
 def post_detail(request, slug):
-    return render(request, "blog/post-detail.html")
+    identified_post = next(post for post in all_posts if post['slug'] == slug)
+    return render(request, "blog/post-detail.html", {
+        "post": identified_post
+    })
