@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    The Post Title
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post-detail.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static "blog/images/mountains.jpg" %}" alt="Post Title">
+            <address>By Robaa</address>
+            <div>
+                Last updated on <time> Feb 8th</time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, molestias veniam provident repellat numquam, in culpa sit eum totam est quia laudantium, dolore incidunt excepturi cupiditate suscipit officiis hic illo?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, molestias veniam provident repellat numquam, in culpa sit eum totam est quia laudantium, dolore incidunt excepturi cupiditate suscipit officiis hic illo?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, molestias veniam provident repellat numquam, in culpa sit eum totam est quia laudantium, dolore incidunt excepturi cupiditate suscipit officiis hic illo?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, molestias veniam provident repellat numquam, in culpa sit eum totam est quia laudantium, dolore incidunt excepturi cupiditate suscipit officiis hic illo?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, molestias veniam provident repellat numquam, in culpa sit eum totam est quia laudantium, dolore incidunt excepturi cupiditate suscipit officiis hic illo?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi, molestias veniam provident repellat numquam, in culpa sit eum totam est quia laudantium, dolore incidunt excepturi cupiditate suscipit officiis hic illo?</p>
+
+    </main>
+{% endblock content%}
