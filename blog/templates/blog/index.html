@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+    <header id="main-navigation">
+        <h1>
+            <a href="">Robaa's Blog </a> 
+        </h1>
+        <nav>
+            <a href="">All Posts </a>
+        </nav>
+    </header>
+    <section id = "welcome">
+        <header >
+            <img src = "" alt = "Robaa - The Author of This Blog"/>
+            <h2>ROBAA'S BLOG<h2>
+        </header>
+        <p>Hi , I am Robaa and I love to blog about tech and the world!</p>
+    </section>
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        
+        <ul>
+            <li>
+                <article class = "post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking">
+                        <div class = "post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>There's noting like the views you get when hiking the mountains! 
+                                And I wasn't even prepared fot what happened 
+                                whilst I was enjoying the view!</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+    <section id = "about">
+        <h2>What I Do </h2>
+        <p>I love programming , I love to help others and I enjoy exploring new 
+            technologies in general!
+        </p>
+        <p>
+            My goal is to keep on growing as a developer - and 
+            if I could help you do the same , I'd be very happy!
+        </p>
+    </section>
+{% endblock content %}
