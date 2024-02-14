@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load blog_extras %}
 
 {% block title %}
     {{post.title}}
@@ -51,7 +52,7 @@
 
     
     <main>
-        <p>{{post.content | linebreaks}}</p>
+        <p>{{post.content|convert_markdown|safe}}</p>
 
     </main>
     <section id="comments">
