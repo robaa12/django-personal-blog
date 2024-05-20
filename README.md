@@ -16,3 +16,5 @@ This is a simple blog web application built using Django, a high-level Python we
 4. Run migrations
 5. Create a superuser account
 6. Start the development server
+
+## Hosting Screenshots at screenshots directory
